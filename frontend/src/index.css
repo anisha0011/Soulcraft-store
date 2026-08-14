@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Space Grotesk', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #1F2937;
+    background-color: #FFF5F7;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom white-pink scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #F472B6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E11D48;
+}
+
+/* Glass & pink surface effects */
+.glass-pink {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.shadow-card-pink {
+  box-shadow: 0 8px 30px -4px rgba(244, 114, 182, 0.15), 0 2px 8px -2px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(251, 207, 232, 0.7);
+}
+
+.shadow-card-dark {
+  box-shadow: 0 8px 30px -4px rgba(244, 114, 182, 0.15), 0 2px 8px -2px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(251, 207, 232, 0.7);
+}
+
+.shadow-glow-accent {
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.25);
+}
+
+/* Bold typography tracking utilities */
+.tracking-ultra {
+  letter-spacing: 0.18em;
+}
+
+/* Subtle image shimmer animation */
+@keyframes shimmer {
+  0% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0.85; transform: scale(1); }
+}
+
+.animate-pulse-gentle {
+  animation: shimmer 4s infinite ease-in-out;
+}
+
+
